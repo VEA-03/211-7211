@@ -1,0 +1,48 @@
+// Задача 1
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	float dis, x1, x2, y1, y2;
+	cout << "x1= ";
+	cin >> x1;
+	cout << "x2= ";
+	cin >> x2;
+	cout << "y1= ";
+	cin >> y1;
+	cout << "y2= ";
+	cin >> y2;
+	dis = sqrt(pow(abs(x2 - x1), 2) + pow(abs(y2 - y1), 2));
+	cout << "Расстояние= " << dis;
+}
+
+
+// Задача 2
+#include <iostream>
+#include <math.h>
+using namespace std;
+int a, b, c, ac, bc;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "a= ";
+	cin >> a;
+	cout << "b= ";
+	cin >> b;
+	cout << "c= ";
+	cin >> c;
+	if (a > c)
+		ac = a - c;
+	else
+		ac = c - a;
+	if (b > c)
+		bc = b - c;
+	else
+		bc = c - b;
+	cout << "Сумма = " << ac + bc;
+}
+
+
+
+
