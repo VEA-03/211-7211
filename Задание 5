@@ -46,3 +46,73 @@ int main() {
 
 
 
+// Задача 3
+#include <iostream>
+using namespace std;
+int a, b, c, ac, bc;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите a= ";
+	cin >> a;
+	cout << "Введите b= ";
+	cin >> b;
+	cout << "На оси c находится между a и b" << "\n";
+	cout << "Введите c= ";
+	cin >> c;
+	if (b<c<a)
+		cout << "Введите другое c= ";
+	cout << "ac = " << a * c << "\n";
+	cout << "bc = " << b * c;
+}
+
+
+// Задача 4
+#include <iostream>
+using namespace std;
+int main()
+{
+	double x1, x2, y1, y2, a, b;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите координату x1 = ";
+	cin >> x1;
+	cout << "Введите координату x2 = ";
+	cin >> x2;
+	cout << "Введите координату y1 = ";
+	cin >> y1;
+	cout << "Введите координату y2 = ";
+	cin >> y2;
+	if ((x1 != x2) && (y1 != y2) && (abs(x1 - x2) != abs(y1 - y2)))
+	{
+		cout << "Периметр прямоугольника: "<< 2 * ((abs(x1 - x2) + abs(y1 - y2)))<<"\n";
+		cout << "Площадь прямоугольника: "<< abs(x1 - x2) * abs(y1 - y2);
+	}
+	else
+		cout << "Объект не является прямоугольником!";
+}
+
+
+// Задача 5
+#include <iostream>
+using namespace std;
+int main() {
+	double x1, x2, y1, y2, x3, y3, a, b, c, P;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите координату x1 = ";
+	cin >> x1;
+	cout << "Введите координату x2 = ";
+	cin >> x2;
+	cout << "Введите координату y1 = ";
+	cin >> y1;
+	cout << "Введите координату y2 = ";
+	cin >> y2;
+	cout << "Введите координату x3 = ";
+	cin >> x3;
+	cout << "Введите координату y3 = ";
+	cin >> y3;
+	a = sqrt(abs(x1 - x2) + abs(y1 - y2));
+	b = sqrt(abs(x2 - x3) + abs(y2 - y3));
+	c = sqrt(abs(x1 - x3) + abs(y1 - y3));
+	P = (a + b + c) / 2;
+	cout << "Периметр = "<< P << "\n";
+	cout << "Площадь = " << sqrt(P * (P - a) * (P - b) * (P - c));
+}
