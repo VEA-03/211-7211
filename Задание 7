@@ -1,0 +1,110 @@
+// Задача 1
+#include <iostream>
+using namespace std;
+float Pi = 3.14, a, rad;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "a = ";
+	cin >> a;
+	double rad = a * Pi / 180;
+	cout << "a в радианах = " << rad;
+}
+
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+float Pi = 3.14, a, gr;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "a = ";
+	cin >> a;
+	double gr = 180 * a / Pi;
+	cout << "a в радианах = " << gr;
+}
+
+
+
+// Задача 3
+#include <iostream>
+using namespace std;
+float x, y, a;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	x = 5;
+	a = 500;
+	cout << "1 килограмм конфет стоит : " << a / x <<"\n";
+	cout << "Введите массу конфет :";
+	cin >> y;
+	cout << "Стоимость конфет такого веса : " << a / x * y;
+}
+
+
+
+// Задача 4
+#include <iostream>
+using namespace std;
+float v1, v2, s, t;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "Скорость первого автомобиля = ";
+	cin >> v1;
+	cout << "Скорость второго автомобиля = ";
+	cin >> v2;
+	cout << "Растояние между ними = ";
+	cin >> s;
+	t = 7;
+	cout << "Расстояние между ними через несколько часов = " << (v1*t)+(v2*t)+s << " км";
+}
+
+
+
+
+// Задача 5
+#include <iostream>
+using namespace std;
+float a, b, x;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "Число а = ";
+	cin >> a;
+	cout << "Число b = ";
+	cin >> b;
+	if (a == 0)
+		cout << "В уравнении (A•x + B = 0) x = " << 0;
+	else
+		cout << "В уравнении (A•x + B = 0) x = " << -b / a;
+}
+
+
+
+
+
+// Задача 6
+#include <iostream>
+using namespace std;
+double a1, b1, c1, a2, b2, c2, d, x, y;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "а1 = ";
+	cin >> a1;
+	cout << "b1 = ";
+	cin >> b1;
+	cout << "c1 = ";
+	cin >> c1;
+	cout << "a2 = ";
+	cin >> a2;
+	cout << "b2 = ";
+	cin >> b2;
+	cout << "c2 = ";
+	cin >> c2;
+	d = a1 * b2 - a2 * b1;
+	if (d != 0) {
+		x = (c1 * b2 - c2 * b1) / d;
+		y = (a1 * c2 - a2 * c1) / d;
+		cout << "x = " << x << "\n" << "y = " << y;
+	}
+	else
+		cout << "a1 * b2 - a2 * b1 = 0" << "\n";
+}
