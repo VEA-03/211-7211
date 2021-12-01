@@ -1,0 +1,76 @@
+// Задача 1
+#include <iostream>
+using namespace std;
+int x;
+int y;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "байты = ";
+	cin >> x;
+	if (x > 1024){
+		y = x/1024+1;
+	}
+	else{
+		y = 1;
+	}
+	cout << "килобайт = "<< y;
+}
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+int x, y, i;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "x>y; x = ";
+	cin >> x;
+	cout << "x>y; y = ";
+	cin >> y;
+	i=0;
+	while (x>=y){
+		x-=y;
+		i++;
+	}
+	cout << "Количество отрезков y на отрезке x = " << i;
+}
+
+
+// Задача 3
+#include <iostream>
+using namespace std;
+int x, y;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "x>y; x = ";
+	cin >> x;
+	cout << "x>y; y = ";
+	cin >> y;
+	cout << "Количество свободной части x = " << x%y;
+}
+
+
+// Задача 4
+#include <iostream>
+using namespace std;
+int x;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "x = ";
+	cin >> x;
+	cout << x%10 << x/10;
+}
+
+
+// Задача 5
+#include <iostream>
+using namespace std;
+int x, y;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "x = ";
+	cin >> x;
+	y =(x - x%100)/100;
+	x = x%100;
+	cout << x << y;
+}
