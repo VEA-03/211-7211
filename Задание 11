@@ -1,0 +1,156 @@
+// Задача 1
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int a, b;
+	cout << "a= ";
+	cin >> a;
+	cout << "b= ";
+	cin >> b;
+	if (a != b) {
+		if (a > b) {
+			b = a;
+		}
+		else {
+			a = b;
+		}
+	}
+	else {
+		a = 0;
+		b = 0;
+	}
+	cout << "a= " << a;
+	cout << "b= " << b;
+}
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int x, y, z;
+	cout << "x= ";
+	cin >> x;
+	cout << "y= ";
+	cin >> y;
+	cout << "z= ";
+	cin >> z;
+	if (y<=z&&y<=x) {
+		cout << x+z;
+	}
+	else {
+		if (x<=z&&x<=y) {
+			cout << y+z;
+		}
+		else {
+			cout << y+x;
+		}
+	}
+}
+
+
+// Задача 3
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+int main() {
+	float A, B, C;
+	cout << "A= ";
+	cin >> A;
+	cout << "B= ";
+	cin >> B;
+	cout << "C= ";
+	cin >> C;
+	if (abs(A-B)<abs(A-C)) {
+		cout << "B, " << B;
+	}
+	else {
+		cout << "C, " <<C;
+	}
+}
+
+
+// Задача 4
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	float OX, OY;
+	cout << "OX= ";
+	cin >> OX;
+	cout << "OY= ";
+	cin >> OY;
+	if ((OX > 0) & (OY > 0)) {
+		cout << "1 четверть";
+	}
+	else if ((OX < 0) & (OY > 0)) {
+		cout << "2 четверть";
+	}
+	else if ((OX < 0) & (OY < 0)) {
+		cout << "3 четверть";
+	}
+	else {
+		cout << "4 четверть";
+	}
+}
+
+
+// Задача 5
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cout << "Введите n: ";
+    cin >> n;
+    if (n == 0) {
+        cout << "Нулевое ";
+    }
+    else {
+        if (n > 0) {
+            cout << "Положительное ";
+        }
+        else {
+            cout << "Отрицательное ";
+        }
+        if ((n % 2) == 0) {
+            cout << "четное ";
+        }
+        else {
+            cout << "нечетное ";
+        }
+    }
+    cout << "число";
+}
+
+
+// Задача 6
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int n;
+	cout << "n= ";
+	cin >> n;
+	if (n % 2 == 0) {
+		cout << "четное ";
+	}
+	else {
+		cout << "нечетное ";
+	}
+	if (n / 10 == 0) {
+		cout << "однозначное число";
+	}
+	else if (n/10>0&&n/10<10) {
+		cout << "двухзначное число";
+	}
+	else if (n/100>0&&n/100<10) {
+		cout << "трехзначное число";
+	}
+}
