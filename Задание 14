@@ -1,0 +1,124 @@
+// Задача 1
+#include <iostream>
+#include <tchar.h>
+using namespace std;
+int main()
+{
+    int a, b, n;
+    cout << "a: ";
+    cin >> a;
+    cout << "b: ";
+    cin >> b;
+    int i = a;
+    for (i; i <= b; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << i << " ";
+        }
+    }
+    cin >> n;
+}
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+int main() 
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, n;
+	cout << "a: ";
+	cin >> a;
+	cout << "b: ";
+	cin >> b;
+	n = a % b;
+	cout << "Длина свободной части: " << n;
+}
+
+
+// Задача 3
+# include <iostream>
+# include <windows.h>
+# include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n;
+	int k = 0;
+	int s = 0;
+	cout << "n= ";
+	cin >> n;
+	while (s <= n) {
+		k++;
+		s += k;
+	}
+	cout << "Наименьшее: " << endl <<"k: " << k << endl;
+}
+
+
+// Задача 4
+#include <iostream>
+using namespace std;
+int main() 
+{
+    setlocale(LC_ALL, "Russian");
+    float p;
+    cout << "процент: ";
+    cin >> p;
+    int k = 1;
+    float s = 1000;
+    while (s <= 1100) 
+    {
+        ++k;
+        s += s * p / 100;
+    }
+    cout << "кол-во месяцев: " << k << endl << "итоговый размер вклада: " << s;
+    return 0;
+}
+
+
+// Задача 5
+#include <iostream>
+using namespace std;
+signed main() 
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b;
+	cout << "a: ";
+	cin >> a;
+	cout << "b: ";
+	cin >> b;
+	while (a != b) 
+    {
+		if (a > b)
+			a = a - b;
+		else
+			b = b - a;
+	}
+	cout << "НОД: " << a;
+	return 0;
+}
+
+
+// Задача 6
+#include <iostream>
+using namespace std;
+int main() 
+{
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cout << "n: ";
+    cin >> n;
+    int f1 = 1, f2 = 1, f = 0, k = 2;
+    while (f < n) 
+    {
+        k++;
+        f = f2 + f1;
+        f2 = f1;
+        f1 = f;
+    }
+    cout << "k: " << k;
+    return 0;
+}
