@@ -1,0 +1,68 @@
+
+// Задача 1
+#include <iostream>
+using namespace std;
+float pow() 
+{
+	setlocale(LC_ALL, "Russian");
+	float b;
+	float a;
+	cout << "a: ";
+	cin >> a;
+	b = a * a * a;
+	return b;
+}
+int main() 
+{
+	for (int i = 1; i <= 5; i++) 
+	{
+		cout << "ответ: " << pow() << endl;
+
+	}
+}
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+int Sign(double x)
+{
+    return (x > 0) - (x < 0);
+}
+int main()
+{
+    double a, b;
+    cout << "a: ";
+    cin >> a;
+    cout << "b: ";
+    cin >> b;
+    cout << Sign(a) + Sign(b) << endl;
+}
+
+
+//Задача 3
+#include <iostream>
+using namespace std;
+float RingS(float R1, float R2) 
+{
+	float S = 3.14 * (R1 * R1 - R2 * R2);
+	if (R1 > R2) {
+		return S;
+	}
+	else {
+		return 0;
+	}
+}
+int main() 
+{
+	for (int i = 1; i <= 3; i++) 
+	{
+		float R1, R2;
+		cout << "r1= ";
+		cin >> R1;
+		cout << "r2= ";
+		cin >> R1;
+		cout << "S" << i << ":" << RingS(R1, R2) << endl;
+	}
+	return 0;
+}
