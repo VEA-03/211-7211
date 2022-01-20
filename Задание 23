@@ -1,0 +1,85 @@
+// Задача 1
+#include <iostream>
+using namespace std;
+int main()
+{
+    char C;
+    cin >> C;
+    cout << char(C - 1) <<" ";
+    cout << char(C + 1);
+}
+
+
+// Задача 2
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s;
+    cin >> s;
+    for (int i = 0; i < s.size(); ++i) 
+    {
+        cout << s[i] <<' ';
+    }
+}
+
+
+// Задача 3
+#include <iostream>
+using namespace std;
+int main()
+{
+    int lat = 0;
+    string a;
+    cin >> a;
+    for (int i = 0; i < a.size(); ++i) 
+    {
+        if (a[i] >= 'a' && a[i] <= 'z')
+            ++lat;
+    }
+    cout << lat;
+}
+
+
+// Задача 4
+#include <string>
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    char C;
+    string S, S2 ="";
+    cout << "Введите строку: ";
+    getline(cin, S);
+    cout << "Введите символ: ", cin >> C;
+    for (int i = 0; i < S.length(); i++)
+    {
+        S2 += S[i];
+        if (S[i] == C)
+        {
+            S2 += S[i];
+        }
+    }
+    S = S2;
+    cout << S;
+}
+
+
+// Задача 5
+#include <iostream>
+using namespace std;
+int main()
+{
+    string S, S0;
+    cout << "Строка: ";
+    cin >> S;
+    cout << "Символ: ";
+    cin >> S0;
+    int pos = S.find(S0);
+    while (pos + 1) 
+    {
+        cout << pos <<" ";
+        pos = S.find(S0, pos + 1);
+    }
+}
